@@ -154,7 +154,7 @@ const onCityChangeActive = (e) => {
            console.log(data)
             var config = {
               method: 'post',
-              url: 'https://lanfiamyapi.herokuapp.com/admins/',
+              url: 'https://apivulnerable.herokuapp.com/admins/',
               headers: { 
                 'Content-Type': 'application/json'
               },
