@@ -1,9 +1,5 @@
 {
   "name": "lanfiatech-dash",
-  "engines": { 
-  "node": "16.15.0",
-  "npm": "8.5.5"
-  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,7 +17,6 @@
     "chart.js": "^3.7.1",
     "classnames": "^2.3.1",
     "core-js": "^3.22.6",
-    "create-app-react": "^1.0.6",
     "formik": "^2.2.9",
     "pkg": "^5.7.0",
     "primeflex": "^3.2.1",

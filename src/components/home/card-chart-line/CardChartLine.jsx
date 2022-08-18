@@ -23,7 +23,7 @@ const CardChartLine = ()=>{
                     <div className=" d-flex "  >
                         <CIcon icon={cilHome} customClassName="" className="card-chart-line--icon" />
                        <h2 className="card-chart-line--titre" >
-                        Evolution
+                        titre
                         </h2> 
                     </div>
                    
