@@ -59,7 +59,7 @@ const DataTableCrudIndividus = (props) => {
 
     useEffect(() => {
         
-        productService.getIndividus().then(data =>  setProducts(data[2].chefmenage));
+        productService.getIndividus().then(data =>  setProducts(data));
         
     }, []); 
 
@@ -124,65 +124,55 @@ const DataTableCrudIndividus = (props) => {
         )
     }
 
+    const owner1BodyTemplate = (rowData) => {
+        return (rowData.owner1);
+    }
+    const nomBodyTemplate = (rowData) => {
+        return rowData.nom;
+    }
 
-    const emailBodyTemplate = (rowData) => {
-        return (rowData.email);
+    const prenomBodyTemplate = (rowData) => {
+        return rowData.prenom;
     }
-    const user_nameBodyTemplate = (rowData) => {
-        return rowData.user_name;
-    }
-
-    const communeBodyTemplate = (rowData) => {
-        return rowData.commune;
-    }
-    const first_nameTemplate = (rowData) => {
-        return rowData.first_name
+    const nationaliteTemplate = (rowData) => {
+        return rowData.nationalite
   
     }
-    const passwordTemplate = (rowData) => {
-        return rowData.password;
+    const departementTemplate = (rowData) => {
+        return rowData.departement;
   
     }
-    const adresseTemplate = (rowData) => {
-        return rowData.adresse;
+    const numeroTemplate = (rowData) => {
+        return rowData.numero;
   
     }
-    const about_meTemplate = (rowData) => {
-        return rowData.about_me
+    const sous_prefectureTemplate = (rowData) => {
+        return rowData.sous_prefecture
   
     }
-    const is_activeTemplate = (rowData) => {
+    const communeTemplate = (rowData) => {
         return(
-            <span
-            className={`badge badge-success bg-success`}
-          >
-    {rowData.is_active == true ? 'Oui': ''}
-    </span>
+   
+    rowData.commune 
+   
         )
-  
-     
-  
     }
-    const is_staff = (rowData) => {
+    const lieu_residence_a = (rowData) => {
         return(
-            <span
-            className={`badge badge-success bg-success`}
-          >
-    {rowData.is_staff == true ? 'Oui': ''}
-    </span>
+      
+    rowData.lieu_residence_a
+  
         )
   
     }
-    const is_superuserTemplate = (rowData) => {
+    const numero_cniTemplate = (rowData) => {
         return(
-            <span
-            className={`badge badge-success bg-success`}
-          >
-    {rowData.is_superuser == true ? 'Oui': ''}
-    </span>
-        )
+   
+    rowData.numero_cni 
+   )
   
     }
+  
   
 
     const actionBodyTemplate = (rowData) => {
@@ -209,22 +199,24 @@ const DataTableCrudIndividus = (props) => {
                     currentPageReportTemplate="Afficher de {first} à {last} de {totalRecords} Acteurs"
                     globalFilter={globalFilter}  responsiveLayout="scroll">
                     <Column selectionMode="multiple" headerStyle={{ width: '2rem' }} exportable={false}></Column>
-                    <Column field="email" header="Email" body={emailBodyTemplate}   style={{ minWidth: '5rem' }}></Column>
-                    <Column field="user_name" header="Nom d'utilisateur" body={user_nameBodyTemplate}   style={{ minWidth: '16rem' }}></Column>
-                    <Column field="commune" header="Commune" body={communeBodyTemplate}  style={{ minWidth: '16rem' }}></Column>
-                    <Column field="first_name" header="Nom" body={first_nameTemplate}  style={{ minWidth: '15rem' }}></Column>
-                    <Column field="adresse" header="Adresse" body={adresseTemplate}  style={{ minWidth: '15rem' }}></Column>
+                    <Column field="owner1" header="owner1" body={owner1BodyTemplate}   style={{ minWidth: '5rem' }}></Column>
+                    <Column field="nom" header="Nom " body={nomBodyTemplate}   style={{ minWidth: '16rem' }}></Column>
+                    <Column field="prenom" header="Prenom" body={prenomBodyTemplate}  style={{ minWidth: '16rem' }}></Column>
+                    <Column field="nationalite" header="Nationnalité" body={nationaliteTemplate}  style={{ minWidth: '15rem' }}></Column>
+                    <Column field="numero_cni" header="Numero CNI" body={numero_cniTemplate}  style={{ minWidth: '10rem' }}></Column>
                 
-                    <Column field="password" header="Mot de Passe" body={passwordTemplate}  style={{ minWidth: '10rem' }}></Column>
-                    <Column field="about_me" header="À propos de moi" body={about_meTemplate}  style={{ minWidth: '15rem' }}></Column>
-                    <Column field="is_active" header="Actif " body={is_activeTemplate}  style={{ minWidth: '10rem' }}></Column>
-                    <Column field="is_staff" header="Personnel " body={is_staff}  style={{ minWidth: '15rem' }}></Column>
-                    <Column field="is_superuser" header="Super-utilisateur" body={is_superuserTemplate}  style={{ minWidth: '10rem' }}></Column>
+                    <Column field="numero" header="numero Tel" body={numeroTemplate}  style={{ minWidth: '15rem' }}></Column>
+                    <Column field="commune" header="Commune " body={communeTemplate}  style={{ minWidth: '10rem' }}></Column>
+           
+                    <Column field="departement" header="Departement" body={departementTemplate}  style={{ minWidth: '10rem' }}></Column>
+                    <Column field="sous_prefecture" header="Sous-préfecture" body={sous_prefectureTemplate}  style={{ minWidth: '15rem' }}></Column>
+                    <Column field="lieu_residence_a" header="Lieu résidence actuel " body={lieu_residence_a}  style={{ minWidth: '15rem' }}></Column>
                     
                     <Column body={actionBodyTemplate} exportable={false} style={{ minWidth: '1rem' }}></Column>
                 </DataTable>
             </div>
 
+     
 
         </div>
     );

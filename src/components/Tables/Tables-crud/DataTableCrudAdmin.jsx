@@ -145,7 +145,7 @@ const onCityChangeActive = (e) => {
                // _product.id = createId();
                 //_product.image = 'product-placeholder.svg';
                 _products.push(_product);
-                toast.current.show({ severity: 'success', summary: 'Successful', detail: 'Product Created', life: 3000 });
+                toast.current.show({ severity: 'success', summary: 'Successful', detail: 'Administrateur Créé', life: 3000 });
             }
 
             setProducts(_products);
@@ -154,7 +154,7 @@ const onCityChangeActive = (e) => {
            console.log(data)
             var config = {
               method: 'post',
-              url: 'https://lanfiamyapi.herokuapp.com/admins/',
+              url: 'https://apivulnerable.herokuapp.com/admins/',
               headers: { 
                 'Content-Type': 'application/json'
               },

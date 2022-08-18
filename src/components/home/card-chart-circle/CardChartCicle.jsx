@@ -23,12 +23,12 @@ const CardChartCicle = ()=>{
                 <p className="">
                         <CIcon icon={cilHome} customClassName="" className="card-chart-cicle--icon" />
                        <span className="card-chart-cicle--titre" >
-                        titre
+                        Individus
                         </span> 
                     </p>
                     <div className="d-flex" style={{justifyContent:"space-between"}} >
                         <div className="">
-                            <p>contenu</p>
+                            <p>VulnerabilitePhysique</p>
                         </div>
                         <div className="">
                             <p>45%</p>
@@ -37,7 +37,7 @@ const CardChartCicle = ()=>{
                     </div>
                     <div className="d-flex" style={{justifyContent:"space-between"}} >
                         <div className="">
-                            <p>contenu</p>
+                            <p>VulnerabiliteMonetaire</p>
                         </div>
                         <div className="">
                             <p>45%</p>
@@ -46,7 +46,7 @@ const CardChartCicle = ()=>{
                     </div>
                     <div className="d-flex" style={{justifyContent:"space-between"}} >
                         <div className="">
-                            <p>contenu</p>
+                            <p>VulnerabiliteEducatif</p>
                         </div>
                         <div className="">
                             <p>45%</p>
